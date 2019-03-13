@@ -5,5 +5,10 @@
     "license": "MIT",
     "require": {
         "illuminate/database": "^5.8"
+    },
+    "autoload": {
+        "classmap": [
+            "application/packages"
+        ]
     }
 }
