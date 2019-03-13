@@ -1,0 +1,7 @@
+{
+    "name": "fusion/fusion",
+    "description": "A World of Warcraft CMS",
+    "type": "project",
+    "license": "MIT",
+    "require": {}
+}
