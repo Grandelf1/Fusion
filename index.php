@@ -1,11 +1,5 @@
 <?php
 
-if(file_exists("install") && !file_exists("install/.lock"))
-{
-	header("Location: install");
-	die();
-}
-
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT
