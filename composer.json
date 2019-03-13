@@ -3,5 +3,7 @@
     "description": "A World of Warcraft CMS",
     "type": "project",
     "license": "MIT",
-    "require": {}
+    "require": {
+        "illuminate/database": "^5.8"
+    }
 }
