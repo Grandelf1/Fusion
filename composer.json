@@ -4,7 +4,8 @@
     "type": "project",
     "license": "MIT",
     "require": {
-        "illuminate/database": "^5.8"
+        "illuminate/database": "^5.8",
+        "smarty/smarty": "^3.1"
     },
     "autoload": {
         "classmap": [
