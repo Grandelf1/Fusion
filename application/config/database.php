@@ -35,3 +35,67 @@ $db["account"]["dbcollat"] = "utf8_general_ci";
 $db["account"]["swap_pre"] = "";
 $db["account"]["autoinit"] = FALSE;
 $db["account"]["stricton"] = FALSE;
+
+
+$config = [
+
+    /*
+    |--------------------------------------------------------------------------
+    | Database Connections
+    |--------------------------------------------------------------------------
+    |
+    | Here are each of the database connections setup for your application.
+    | Of course, examples of configuring each database platform that is
+    | supported by Laravel is shown below to make development simple.
+    |
+    |
+    | All database work in Laravel is done through the PHP PDO facilities
+    | so make sure you have the driver for your particular database of
+    | choice installed on your machine before you begin development.
+    |
+    */
+    'connections' => [
+        'fusion' => [
+            'driver' => 'mysql',
+            'host' => '127.0.0.1',
+            'port' => '3306',
+            'database' => 'fusion',
+            'username' => 'root',
+            'password' => '',
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+        ],
+    ]
+];
+
+/*
+|--------------------------------------------------------------------------
+| Database Setup
+|--------------------------------------------------------------------------
+|
+| Setup the connections defined in the config and boot Eloquent,
+| which will be used throughout the application.
+|
+*/
+
+$capsule = new Illuminate\Database\Capsule\Manager();
+
+foreach ($config['connections'] as $connection) {
+    foreach ($connection as $settings) {
+        $capsule->addConnection([
+            'driver'    => $settings['driver'],
+            'host'      => $settings['host'],
+            'database'  => $settings['database'],
+            'username'  => $settings['username'],
+            'password'  => $settings['password'],
+            'charset'   => $settings['charset'],
+            'collation' => $settings['collation']
+        ], $connection);
+    }
+}
+
+// Set this instance as the global instance.
+$capsule->setAsGlobal();
+
+// Boot up Eloquent.
+$capsule->bootEloquent();
