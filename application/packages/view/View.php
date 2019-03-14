@@ -56,7 +56,7 @@ class View
         $engine = $this->resolveEngine($file);
 
         // Create the response that will render the view.
-        return Response::make($engine->get($file));
+        return Response::make($engine->get($file, $data));
     }
 
     /**
