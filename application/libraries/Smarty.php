@@ -8,7 +8,8 @@
  * @author		Kepler Gelotte
  * @link		http://www.coolphptools.com/codeigniter-smarty
  */
-require_once( BASEPATH.'smarty/Smarty.class.php' );
+
+use \Smarty;
 
 class CI_Smarty extends Smarty {
 
@@ -36,7 +37,7 @@ class CI_Smarty extends Smarty {
 	 *  Parse a template using the Smarty engine
 	 *
 	 * This is a convenience method that combines assign() and
-	 * display() into one step. 
+	 * display() into one step.
 	 *
 	 * Values to assign are passed in an associative array of
 	 * name => value pairs.
@@ -55,12 +56,12 @@ class CI_Smarty extends Smarty {
 		try
 		{
 			if($data == ''){ $data = array(); }
-			
+
 			foreach($data as $key => $val)
 			{
 				$this->assign($key, $val);
 			}
-			
+
 			if($return == FALSE)
 			{
 				$CI = &get_instance();

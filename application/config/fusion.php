@@ -183,8 +183,8 @@ $config['use_fcms_tooltip'] = true;
 | Use Smileys
 |--------------------------------------------------------------------------
 |
-| This setting goes to where your smiley folder is, if you 
-| change the emoticons in it then don't forget to change 
+| This setting goes to where your smiley folder is, if you
+| change the emoticons in it then don't forget to change
 | the smileys.php
 |
 */
@@ -216,4 +216,4 @@ $config['analytics'] = false;
 | Turning it on will improve performance drastically.
 |
 */
-$config['cache'] = true;
+$config['cache'] = false;
