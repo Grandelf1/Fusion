@@ -5,7 +5,8 @@
     "license": "MIT",
     "require": {
         "illuminate/database": "^5.8",
-        "smarty/smarty": "^3.1"
+        "smarty/smarty": "^3.1",
+        "illuminate/filesystem": "^5.8"
     },
     "autoload": {
         "classmap": [
